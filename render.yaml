@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: eth-miner-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 7358919948:AAHvjv3l7Kajm3lIkRdi3FBXVBAoAVDM3gw
+      - key: WEBAPP_URL
+        value: will_be_replaced_later
+    autoDeploy: false
